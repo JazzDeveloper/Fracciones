@@ -33,26 +33,11 @@ public final class Fraccion {
 		int b = mínimoComúnMúltiploDenominadores / this.denominador * otraFraccion.numerador;
 			
 		return new Fraccion(a + b, mínimoComúnMúltiplo(this.denominador, otraFraccion.denominador));		
-	}
+	} 
 
 	@Override
 	public String toString() {
 		return numerador + "/" + denominador;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+		
 }

@@ -23,7 +23,7 @@ public class FraccionTest {
 		assertThat("1/1" ,is(fraccion1.simplificar().toString()));	
 	}
 
-	@Test
+	@Test 
 	public void laSumaDeUnoSobreUnoYUnoSobreDosEsTresSobreDos(){
 		assertThat(fraccion1.más(fraccion2),is(new Fraccion(3, 2)));	
 	}
