@@ -4,29 +4,55 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 
 
-public class FraccionTest {
+public class FracciónTest {
 
-	private  Fraccion fraccion1;
-	private  Fraccion fraccion2;
+	private Fracción unoSobreUno;
+	private Fracción unoSobreDos;
 	
 	@Before
-	public void crearFraccion() {
-		fraccion1 = new Fraccion(1, 1);		
-		fraccion2 = new Fraccion(1, 2);		
+	public void crearFracciones() {
+		unoSobreUno = new Fracción(1, 1);		
+		unoSobreDos = new Fracción(1, 2);		
+	}
+	
+	//@Test(expected = IllegalArgumentException.class)
+	public void unaFraccionNoPuedeTenerDenominadorCero(){    
+		new Fracción(5,0);
+	}
+	
+	@Test
+	public void unaFraccionSoloConNumeradorTieneComoDenominadorPorDefectoUno(){    
+		assertThat(new Fracción(10,1) ,is(new Fracción(10)));	
 	}
 	
 	@Test
 	public void simplificarDiezSobreDosEsCincoSobreUno(){
-		assertThat("1/1" ,is(fraccion1.simplificar().toString()));	
+		assertThat(new Fracción(5,1) ,is(new Fracción(10,2).simplificada()));	
 	}
 
 	@Test 
-	public void laSumaDeUnoSobreUnoYUnoSobreDosEsTresSobreDos(){
-		assertThat(fraccion1.más(fraccion2),is(new Fraccion(3, 2)));	
+	public void laSumaEntreUnoSobreUnoYUnoSobreDosEsTresSobreDos(){
+		assertThat(unoSobreUno.más(unoSobreDos),is(new Fracción(3,2)));	
 	}
 	
-
+	@Test 
+	public void laRestaEntreUnoSobreUnoYUnoSobreDosEsUnoSobreDos(){
+		assertThat(unoSobreUno.menos(unoSobreDos),is(new Fracción(1,2)));	
+	}
+	
+	@Test 
+	public void laMultiplicacionEntreUnoSobreUnoYUnoSobreDosEsUnoSobreDos(){
+		assertThat(unoSobreUno.por(unoSobreDos),is(new Fracción(1,2)));	
+	}
+	
+	@Test 
+	public void laDivisiónEntreUnoSobreUnoYUnoSobreDosEsDosSobreUno(){
+		assertThat(unoSobreUno.dividido(unoSobreDos),is(new Fracción(2,1)));	
+	}
+	
 }

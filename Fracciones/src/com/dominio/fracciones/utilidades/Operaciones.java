@@ -1,10 +1,9 @@
 package com.dominio.fracciones.utilidades;
 
-public final class OperacionesFraccion {
+public final class Operaciones {
 
-	private OperacionesFraccion(){
-		throw new AssertionError("Esta es una clase utilitaria");
-		
+	private Operaciones(){
+		throw new AssertionError("Esta es una clase utilitaria");		
 	}
 	
 	public static int máximoComúnDivisor(int a, int b){
