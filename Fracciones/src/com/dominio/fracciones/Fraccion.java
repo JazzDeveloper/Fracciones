@@ -22,14 +22,14 @@ public final class Fraccion {
 	}
 	
 	private int simplificarOperando(final int operando){
-		return operando/máximoComúnDivisor(this.numerador, this.denominador);		
+		return operando / máximoComúnDivisor(this.numerador, this.denominador);		
 	}
 	
 	public Fraccion más(final Fraccion fraccion){
 		Fraccion otraFraccion =  fraccion;
 		
 		int mínimoComúnMúltiploDenominadores = mínimoComúnMúltiplo(this.denominador, otraFraccion.denominador);
-		int a = mínimoComúnMúltiploDenominadores/otraFraccion.denominador * this.numerador;
+		int a = mínimoComúnMúltiploDenominadores / otraFraccion.denominador * this.numerador;
 		int b = mínimoComúnMúltiploDenominadores / this.denominador * otraFraccion.numerador;
 			
 		return new Fraccion(a + b, mínimoComúnMúltiplo(this.denominador, otraFraccion.denominador));		
@@ -37,7 +37,7 @@ public final class Fraccion {
 
 	@Override
 	public String toString() {
-		return numerador+"/"+denominador;
+		return numerador + "/" + denominador;
 	}
 	
 	
