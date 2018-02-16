@@ -14,8 +14,28 @@ public class OperacionesTest {
 	}
 	
 	@Test	
-	public void elMáximoComúnDivisorDeCuarentaYDosConCincuentaYSeisEsCatorce(){
-		assertThat(14 , is(Operaciones.máximoComúnDivisor(42, 56)));		
+	public void elMáximoComúnDivisorEntreDosYTresEsUno(){
+		assertThat(1 , is(Operaciones.máximoComúnDivisor(2, 3)));		
+	}
+	
+	@Test	
+	public void elMáximoComúnDivisorEntreDosYDos(){
+		assertThat(2 , is(Operaciones.máximoComúnDivisor(2, 2)));		
+	}
+	
+	@Test	
+	public void elMáximoComúnDivisorEntreCuatroYDos(){
+		assertThat(2 , is(Operaciones.máximoComúnDivisor(4, 2)));		
+	}
+	
+	@Test	
+	public void elMínimoComúnMúltiploEntreCuatroYDosEsCuatro(){
+		assertThat(4 , is(Operaciones.mínimoComúnMúltiplo(4, 2)));		
+	}
+
+	@Test	
+	public void elMínimoComúnMúltiploEntreDosYUnoEsDos(){
+		assertThat(2 , is(Operaciones.mínimoComúnMúltiplo(2, 1)));		
 	}
 	
 	@Test	
@@ -23,5 +43,4 @@ public class OperacionesTest {
 		assertThat(20 , is(Operaciones.mínimoComúnMúltiplo(20, 20)));		
 	}
 
-	
 }
