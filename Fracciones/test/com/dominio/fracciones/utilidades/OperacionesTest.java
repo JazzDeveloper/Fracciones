@@ -19,12 +19,12 @@ public class OperacionesTest {
 	}
 	
 	@Test	
-	public void elMáximoComúnDivisorEntreDosYDos(){
+	public void elMáximoComúnDivisorEntreDosYDosEsDos(){
 		assertThat(2 , is(Operaciones.máximoComúnDivisor(2, 2)));		
 	}
 	
 	@Test	
-	public void elMáximoComúnDivisorEntreCuatroYDos(){
+	public void elMáximoComúnDivisorEntreCuatroYDosEsDos(){
 		assertThat(2 , is(Operaciones.máximoComúnDivisor(4, 2)));		
 	}
 	
