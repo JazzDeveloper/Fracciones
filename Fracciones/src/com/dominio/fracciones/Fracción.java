@@ -54,7 +54,7 @@ public final class Fracción {
 	public Fracción por(final Fracción fraccion){
 		if(fraccion == null) throw new IllegalArgumentException();
 		Fracción otra =  fraccion;
-		return new Fracción(this.numerador*otra.numerador,this.denominador*otra.denominador); 
+		return new Fracción(this.numerador * otra.numerador,this.denominador * otra.denominador); 
 	}
 	
 	public Fracción dividido(final Fracción fraccion){

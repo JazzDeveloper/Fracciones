@@ -10,37 +10,37 @@ public class OperacionesTest {
 	
 	@Test
 	public void elMáximoComúnDivisorDeUnNumeroEnteroPositivoConCeroEsElMismoNumeroEnteroPositivo() {
-		assertThat(20 , is(Operaciones.máximoComúnDivisor(20, 0)));
+		assertThat(Operaciones.máximoComúnDivisor(20, 0) , is(20));
 	}
 	
 	@Test	
 	public void elMáximoComúnDivisorEntreDosYTresEsUno(){
-		assertThat(1 , is(Operaciones.máximoComúnDivisor(2, 3)));		
+		assertThat(Operaciones.máximoComúnDivisor(2, 3) , is(1));		
 	}
 	
 	@Test	
 	public void elMáximoComúnDivisorEntreDosYDosEsDos(){
-		assertThat(2 , is(Operaciones.máximoComúnDivisor(2, 2)));		
+		assertThat(Operaciones.máximoComúnDivisor(2, 2) , is(2));		
 	}
 	
 	@Test	
 	public void elMáximoComúnDivisorEntreCuatroYDosEsDos(){
-		assertThat(2 , is(Operaciones.máximoComúnDivisor(4, 2)));		
+		assertThat(Operaciones.máximoComúnDivisor(4, 2) , is(2));		
 	}
 	
 	@Test	
 	public void elMínimoComúnMúltiploEntreCuatroYDosEsCuatro(){
-		assertThat(4 , is(Operaciones.mínimoComúnMúltiplo(4, 2)));		
+		assertThat(Operaciones.mínimoComúnMúltiplo(4, 2) , is(4));		
 	}
 
 	@Test	
 	public void elMínimoComúnMúltiploEntreDosYUnoEsDos(){
-		assertThat(2 , is(Operaciones.mínimoComúnMúltiplo(2, 1)));		
+		assertThat(Operaciones.mínimoComúnMúltiplo(2, 1) , is(2));		
 	}
 	
 	@Test	
 	public void elMínimoComúnMúltiploEntreDosNumerosEnterosPositivosIgualesEsElMismoNumeroEnteroPositivo(){
-		assertThat(20 , is(Operaciones.mínimoComúnMúltiplo(20, 20)));		
+		assertThat(Operaciones.mínimoComúnMúltiplo(20, 20) , is(20));		
 	}
 
 }
