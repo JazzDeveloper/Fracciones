@@ -2,11 +2,7 @@ package com.dominio.fracciones;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
-
-import org.junit.Before;
-import org.junit.Rule;
 import org.junit.Test;
-import org.junit.rules.ExpectedException;
 
 
 public class FracciónTest {
@@ -23,7 +19,7 @@ public class FracciónTest {
 	
 	@Test
 	public void simplificarDiezMediosEsCinco(){
-		assertThat(new Fracción(5,1) ,is(new Fracción(10,2).simplificada()));	
+		assertThat(new Fracción(10,2) ,is(new Fracción(5,1).simplificada()));	
 	}
 
 	@Test 

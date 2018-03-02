@@ -12,7 +12,7 @@ public class OperacionesTest {
 	public void elMáximoComúnDivisorDeUnNumeroEnteroPositivoConCeroEsElMismoNumeroEnteroPositivo() {
 		assertThat(Operaciones.máximoComúnDivisor(20, 0) , is(20));
 	}
-	
+	 
 	@Test	
 	public void elMáximoComúnDivisorEntreDosYTresEsUno(){
 		assertThat(Operaciones.máximoComúnDivisor(2, 3) , is(1));		

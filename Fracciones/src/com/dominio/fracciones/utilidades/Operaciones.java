@@ -7,7 +7,7 @@ public final class Operaciones {
 	}
 	
 	public static int máximoComúnDivisor(int a, int b){
-		 return b == 0 ? a : máximoComúnDivisor(b, a % b);
+		 return b == 0 ? a : máximoComúnDivisor(b, a % b); 
 	}
 	
 	public static int mínimoComúnMúltiplo(int a, int b){

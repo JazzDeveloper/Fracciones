@@ -15,7 +15,7 @@ public final class Fracción {
 		this.numerador = numerador;
 		this.denominador = denominador;		
 	}
-	
+	 
 	public Fracción(final int numerador) {		
 		this(numerador, 1);
 	}
